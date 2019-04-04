@@ -11,9 +11,8 @@ int add (int value, struct node *head) {
     if( (p = malloc(sizeof(struct node))) == NULL ) return -1;
 
     curr = head;
-    while(curr->next != NULL) {
- 	curr = curr->next;
-    }
+    while(curr->next != NULL)
+	curr = curr->next;
 
     p->value = value;
     p->next = NULL;
@@ -85,9 +84,10 @@ int delete(struct node *tar, struct node *head) {
 
 void draw (struct node *head) {
     struct node *p;
-    for(p=head->next; p!=NULL; p=p->next) {
+
+    for(p=head->next; p!=NULL; p=p->next)
         printf("%d, ", p->value);
-    }
+
     printf("\n");
 }
 
