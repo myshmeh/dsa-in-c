@@ -12,7 +12,7 @@ int add (int value, struct node *head) {
 
     curr = head;
     while(curr->next != NULL) {
-        curr = curr->next;
+ 	curr = curr->next;
     }
 
     p->value = value;
@@ -79,6 +79,8 @@ int delete(struct node *tar, struct node *head) {
     curr->next = NULL;
 
     free(curr);
+
+    return 1;
 }
 
 void draw (struct node *head) {
